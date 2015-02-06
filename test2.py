@@ -14,11 +14,11 @@ DESCRIPTION
     #
 
     f = open("residues.txt","a")
-
+    f.write(arg1 + '\n')
+    
     for x in items:
         stored.residues = []
         check = []
-        f.write(arg1 + '\n')
         f.write(x + '\n')
         cmd.select(x, 'resn ' + x )
         cmd.select (x+"_res","resn %s around %s" % (x,4))
